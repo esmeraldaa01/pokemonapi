@@ -13,7 +13,7 @@ const Card = styled.h1`
   display: flex;
   flex-wrap: wrap;
   position: absolute;
-  left: 5%;
+  left: 9%;
 `;
 
 const Number = styled.h1`
@@ -73,15 +73,13 @@ const PokemonComponent = () => {
       const colorAndProfile = await getProfileAndColor(
         pokData.data.pokemon_entries[i].entry_number
       );
-      console.log(colorAndProfile, "c");
+
 
       pokArray.push({
         ...pokData.data.pokemon_entries[i],
         ...colorAndProfile,
       });
     }
-
-    console.log("FINAL ARE", pokArray);
     setPokemons(pokArray);
   };
 
@@ -110,7 +108,6 @@ const PokemonComponent = () => {
             </PokemonCard>
           );
         })}
-        j
       </Card>
     </>
   );
