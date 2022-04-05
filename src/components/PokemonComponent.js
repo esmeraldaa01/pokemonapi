@@ -75,6 +75,7 @@ const PokemonComponent = () => {
       );
 
 
+
       pokArray.push({
         ...pokData.data.pokemon_entries[i],
         ...colorAndProfile,

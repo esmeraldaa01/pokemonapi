@@ -6,7 +6,8 @@ const [pokemons , setPokemons] = useState([])
 
     const addPokemon  = async () => {
         const pokemon = {name: 'esme'}
-        const result = await  axios.post('https://pokeapi.co/api/v2/pokemon', pokemon).then(response => setPokemons(response.data));
+        const result = await  axios.post('https://pokeapi.co/api/v2/pokemon', pokemon)
+            .then(response => setPokemons(response.data));
         setPokemons(result.data)
     }
 
